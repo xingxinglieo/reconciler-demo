@@ -1,0 +1,19 @@
+{
+  "JavaScript": {
+    "rules": {}
+  },
+  "TypeScript": {
+    "overrides": [
+      {
+        "files": [
+          "mock/*.ts"
+        ],
+        "rules": {
+          "@typescript-eslint/naming-convention": "off"
+        }
+      }
+    ]
+  },
+  "react": true,
+  "typeChecking": false
+}

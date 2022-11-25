@@ -1,0 +1,50 @@
+{
+  "name": "learn",
+  "version": "1.0.0",
+  "description": "Project created by Eden",
+  "author": "huxingyu.owo",
+  "private": true,
+  "scripts": {
+    "test": "eden-test -l=ts -e=jsdom",
+    "build": "eden-build",
+    "start": "eden-start",
+    "lint": "eden-lint"
+  },
+  "dependencies": {
+    "core-js": "3.25.0",
+    "normalize.css": "^8.0.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "lint-staged": "^10.5.4",
+    "husky": "^4.3.8",
+    "@ies/eden-lint": "^3.16.0",
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.0.1",
+    "@types/testing-library__jest-dom": "^5.14.1",
+    "@ies/eden-test": "^1.1.5",
+    "typescript": "^4.0.2",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.5",
+    "@ies/eden-plugin-sass-webpack": "^1.1.0",
+    "@ies/eden-web-build": "^2.0.0",
+    "postcss": "8.3.6"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint .commitlintrc.js -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": [
+      "eden-lint"
+    ]
+  },
+  "license": "UNLICENSED"
+}
